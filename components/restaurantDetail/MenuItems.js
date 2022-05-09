@@ -65,9 +65,8 @@ export default function MenuItems({ restaurantName }) {
 
   const cartItems = useSelector((state) => state.cartReducer.selectedItems.items);
 
-  const isFoodInCart = (food, cartItems) => (
-    Boolean(cartItems.find((item) => item.title === food.title))
-  );
+  const isFoodInCart = (food, cartItems) =>
+    Boolean(cartItems.find((item) => item.title === food.title));
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -103,8 +102,8 @@ const FoodImage = ({ marginLeft, ...props }) => (
     <Image
       source={{ uri: props.food.image }}
       style={{
-        width: 100,
-        height: 100,
+        width: 80,
+        height: 80,
         borderRadius: 8,
         marginLeft: marginLeft,
       }}
